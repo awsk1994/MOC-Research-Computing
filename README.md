@@ -58,14 +58,14 @@ This section provides a high-level architecture or a conceptual diagram showing 
 The architecture of the current work is shown as below:
 
 
-![Current Arch](./Documentation/Images/CurrArch.png)
+![Current Arch](./img/CurrArch.png)
 
 As shown in the figure, we can find that the Sid's Backend is currently built on AWS. The goal of our project is porting the same system (the whole system, not only the backend) onto Mass Open Cloud (MOC). Therefore, the main job is rebuild the backend to satisfy the MOC's environment.
 
 The hierarchy of Sid's backend can be visualized as the following block diagram:
 
 <p align="center">
-    <img src="./Documentation/Images/SimpleBlock.png" width="50%">
+    <img src="./img/SimpleBlock.png" width="50%">
 </p>
 
 Our work is going to make the green block works on MOC by replacing the blue block layer. Due to the differences of features and functions between MOC and AWS, the blue block has to re-design to ensure the communications between Sid Middleware and Kubernetes services work properly.
@@ -169,11 +169,9 @@ We discussed and agreed that technically, we could build a connector manually an
 ## 8. Directory summary
  - **terraform-sid-backend:** automation script to deploy backend
  - **terraform-oc:** automation script to deploy front-end and middleware
- - **terraform-vm:** experimental scripts to deploy VMs (can ignore)
- - **scripts:** experimental scripts to create tests between middleware and backend (can ignore)
- - **Documentation:** stores images used in README.md (can ignore)
  - **Knowledge Documents .pdf:** files that documents configuration details and knowledge/ideas in this project
  - **Sid install.pdf:** installation and step-by-step instruction to run automation scripts
+ - **Technology_Overview.pdf:** files that documents overview of technologies used (or previously researched)
 
 <!--
 ** **
